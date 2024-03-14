@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PracticalWork.DAL\PracticalWork.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
