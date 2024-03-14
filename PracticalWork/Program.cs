@@ -19,13 +19,17 @@ namespace PracticalWork
 				Name = "Genshin Impact",
 				Style = "Adventure game",
 				Developer = "miHoYo",
-				ReleaseDate = DateTime.Parse("09.28.2020")
+				IsMultiplayer = true,
+				ReleaseDate = DateTime.Parse("09.28.2020"),
+				CopiesSold = 139500000,
 			};
 			Game starRail = new Game() {
 				Name = "Honkai - Star Rail",
 				Style = "Adventure game",
 				Developer = "miHoYo",
-				ReleaseDate = DateTime.Parse("04.09.2023")
+				IsMultiplayer = true,
+				ReleaseDate = DateTime.Parse("04.09.2023"),
+				CopiesSold = 100000000,
 			};
 
 			context.Games.Add(genshinImpact);
@@ -34,11 +38,7 @@ namespace PracticalWork
 
 		private static void WriteGames(Context context) {
 			foreach (Game game in context.Games) {
-				Console.Write($"{game.Id}: ");
-				Console.Write($"{game.Name} | ");
-				Console.Write($"{game.Style} | ");
-				Console.Write($"{game.Developer} | ");
-				Console.WriteLine($"{game.ReleaseDate} | ");
+				Console.WriteLine(game);
 			}
 		}
 	}

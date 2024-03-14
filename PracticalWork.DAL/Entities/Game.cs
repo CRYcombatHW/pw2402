@@ -14,5 +14,11 @@ namespace PracticalWork.DAL.Entities
 		public string Developer { get; set; }
 		public string Style { get; set; }
 		public DateTime ReleaseDate { get; set; }
+		public bool IsMultiplayer { get; set; }
+		public int CopiesSold { get; set; }
+
+		public override string ToString() {
+			return $"{Id}: {Name} | {Developer} | {Style} | {IsMultiplayer} | {ReleaseDate} | {CopiesSold} |";
+		}
 	}
 }
